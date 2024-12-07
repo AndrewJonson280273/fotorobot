@@ -115,7 +115,7 @@ class Fotorobot(QMainWindow, Ui_MainWindow):
                 filters = [f[1] + " = " + f"(SELECT id FROM {f[1]} WHERE name = '" + f[0].lower() + "')" for f in
                            filters]
                 filters_sql = f" WHERE {' AND '''.join(filters)}"
-                print(filters_sql)
+                # print(filters_sql)
             # получение элементов из бд
             raw = fotorobot_db.execute(f"SELECT * FROM {table}{filters_sql}")
             elements = [r for r in raw if path.exists(r[-1])]
@@ -184,7 +184,7 @@ class Fotorobot(QMainWindow, Ui_MainWindow):
             self.show_error(err)  # ой ошибочка вышла...
 
     def change_page(self):
-        print(1)
+        # print(1)
         button = self.sender()
         current_index = self.stacked_widget.currentIndex()
         if button == self.back_button:
