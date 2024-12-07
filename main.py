@@ -71,9 +71,10 @@ class Fotorobot(QMainWindow, Ui_MainWindow):
         self.increase_button.clicked.connect(self.graphic_view.increase_scale)
         self.decrease_button.clicked.connect(self.graphic_view.decrease_scale)
 
-        self.back_button, self.page_label, self.next_button = self.ui_widgets["page_widgets"]
-        self.back_button.clicked.connect(self.change_page)
-        self.next_button.clicked.connect(self.change_page)
+        for el in self.el_list_widgets:
+            back_button, page_label, next_button = el["page_widgets"]
+            back_button.clicked.connect(self.change_page)
+            next_button.clicked.connect(self.change_page)
 
         self.update_list()  # обновляем получается
 
@@ -131,7 +132,7 @@ class Fotorobot(QMainWindow, Ui_MainWindow):
                 self.next_button.setHidden(True)
                 return
 
-            self.back_button, self.page_label, self.next_button = self.ui_widgets["page_widgets"]
+            self.back_button, self.page_label, self.next_button = ui_widgets["page_widgets"]
 
             # создаём список страниц
             count = 0
@@ -184,6 +185,7 @@ class Fotorobot(QMainWindow, Ui_MainWindow):
             self.show_error(err)  # ой ошибочка вышла...
 
     def change_page(self):
+        print(1)
         button = self.sender()
         current_index = self.stacked_widget.currentIndex()
         if button == self.back_button:
