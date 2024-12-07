@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1044</width>
+    <height>894</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Фоторобот</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabs">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>0</y>
+      <width>491</width>
+      <height>831</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="eyes_tab">
+     <attribute name="title">
+      <string>Глаза</string>
+     </attribute>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>481</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="tab_v_layout">
+       <item>
+        <widget class="QGroupBox" name="filters_group_box">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="title">
+          <string>Фильтры</string>
+         </property>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>5</x>
+            <y>20</y>
+            <width>471</width>
+            <height>181</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="filters_v_layout">
+           <property name="spacing">
+            <number>5</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="filter_h_layout">
+             <property name="spacing">
+              <number>20</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="property_label">
+               <property name="text">
+                <string>Пол</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="property_combo">
+               <property name="editable">
+                <bool>false</bool>
+               </property>
+               <property name="currentText">
+                <string>Мужской</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string>Мужской</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Женский</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="filter2_h_layout">
+             <property name="spacing">
+              <number>20</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="gender_label_2">
+               <property name="text">
+                <string>Контур глазной щели</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="countour_eye">
+               <property name="editable">
+                <bool>false</bool>
+               </property>
+               <property name="currentText">
+                <string>Миндалевидный</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string>Миндалевидный</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Сегментоидный</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Круглый</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="filter3_h_layout">
+             <property name="spacing">
+              <number>20</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="gender_label_3">
+               <property name="text">
+                <string>Степень раскрытия глазной щели</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="openin_eye_fissure">
+               <property name="editable">
+                <bool>false</bool>
+               </property>
+               <property name="currentText">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="filter4_h_layout">
+             <property name="spacing">
+              <number>20</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="gender_label_4">
+               <property name="text">
+                <string>Положение глазной щели</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox_4">
+               <property name="editable">
+                <bool>false</bool>
+               </property>
+               <property name="currentText">
+                <string>Горизонтальное</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string>Горизонтальное</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Косовнутреннее</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Косонаружное</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="filter5_h_layout">
+             <property name="spacing">
+              <number>20</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="gender_label_5">
+               <property name="text">
+                <string>Положение век</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox_5">
+               <property name="editable">
+                <bool>false</bool>
+               </property>
+               <property name="currentText">
+                <string>Среднее</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string>Среднее</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>1</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>2</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="f_buttons_layout">
+             <item>
+              <widget class="QPushButton" name="f_apply_button">
+               <property name="text">
+                <string>Применить</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="f_reset_button">
+               <property name="text">
+                <string>Сбросить</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QFrame" name="list_frame">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>220</y>
+        <width>481</width>
+        <height>551</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="back_button">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>770</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;&lt; Назад</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="next_button">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>770</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Вперёд &gt;&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="page_number_label">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>776</y>
+        <width>301</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Страница 2/6</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="nose_tab">
+     <attribute name="title">
+      <string>Нос</string>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>25</x>
+      <y>40</y>
+      <width>500</width>
+      <height>700</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>720</y>
+      <width>197</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="img_layout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Выбранное изображение</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Увеличить</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="text">
+          <string>Уменьшить</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string>Удалить</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1044</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="datebase">
+    <property name="title">
+     <string>База данных</string>
+    </property>
+    <widget class="QMenu" name="add_element">
+     <property name="title">
+      <string>Добавить элемент</string>
+     </property>
+     <addaction name="add_eyes"/>
+     <addaction name="add_mouth"/>
+     <addaction name="add_nose"/>
+     <addaction name="add_hair"/>
+     <addaction name="add_eyebrows"/>
+     <addaction name="add_chin"/>
+     <addaction name="add_moustache"/>
+     <addaction name="add_hat"/>
+     <addaction name="add_clothes"/>
+     <addaction name="add_ears"/>
+     <addaction name="add_wrinkles"/>
+     <addaction name="add_glasses"/>
+    </widget>
+    <addaction name="add_element"/>
+    <addaction name="delete_element"/>
+    <addaction name="edit_element"/>
+   </widget>
+   <addaction name="datebase"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="add_mouth">
+   <property name="text">
+    <string>Рот</string>
+   </property>
+  </action>
+  <action name="add_nose">
+   <property name="text">
+    <string>Нос</string>
+   </property>
+  </action>
+  <action name="add_hair">
+   <property name="text">
+    <string>Волосы</string>
+   </property>
+  </action>
+  <action name="add_eyes">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Глаза</string>
+   </property>
+  </action>
+  <action name="add_eyebrows">
+   <property name="text">
+    <string>Брови</string>
+   </property>
+  </action>
+  <action name="add_chin">
+   <property name="text">
+    <string>Подбородок</string>
+   </property>
+  </action>
+  <action name="add_moustache">
+   <property name="text">
+    <string>Усы</string>
+   </property>
+  </action>
+  <action name="add_hat">
+   <property name="text">
+    <string>Головной убор</string>
+   </property>
+  </action>
+  <action name="add_clothes">
+   <property name="text">
+    <string>Одежда</string>
+   </property>
+  </action>
+  <action name="add_ears">
+   <property name="text">
+    <string>Уши</string>
+   </property>
+  </action>
+  <action name="add_wrinkles">
+   <property name="text">
+    <string>Морщины</string>
+   </property>
+  </action>
+  <action name="add_glasses">
+   <property name="text">
+    <string>Очки</string>
+   </property>
+  </action>
+  <action name="delete_element">
+   <property name="text">
+    <string>Удалить элемент</string>
+   </property>
+  </action>
+  <action name="edit_element">
+   <property name="text">
+    <string>Изменить элемент</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
