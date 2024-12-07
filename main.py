@@ -33,9 +33,8 @@ class Fotorobot(QMainWindow, Ui_MainWindow):
         self.setupUi(self)  # загружаем дизайн
 
         # заносим все действия в список, чтобы удобно было подлючать функции циклом(?)
-        self.db_add_actions = [self.add_nose, self.add_mouth, self.add_eyes, self.add_hair, self.add_glasses,
-                               self.add_chin, self.add_wrinkles,
-                               self.add_eyebrows, self.add_moustache, self.add_hat, self.add_clothes, self.add_ears]
+        self.db_add_actions = [self.add_nose, self.add_mouth, self.add_eyes, self.add_hair,
+                               self.add_chin, self.add_eyebrows, self.add_ears]
         for a in self.db_add_actions:
             a.triggered.connect(self.db_add_element)  # если трегерим - вызываем метод добавления в бд
 
